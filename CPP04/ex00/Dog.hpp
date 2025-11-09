@@ -6,7 +6,7 @@
 /*   By: oalananz <oalananz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 15:20:28 by oalananz          #+#    #+#             */
-/*   Updated: 2025/10/21 18:17:11 by oalananz         ###   ########.fr       */
+/*   Updated: 2025/10/01 17:55:12 by oalananz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class Dog : public Animal
         Dog& operator=(const Dog& obj);
         ~Dog();
         void makeSound() const;
-        void Eat();
 };
 
 #endif

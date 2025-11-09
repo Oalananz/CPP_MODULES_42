@@ -6,7 +6,7 @@
 /*   By: oalananz <oalananz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 17:30:00 by oalananz          #+#    #+#             */
-/*   Updated: 2025/10/21 18:17:41 by oalananz         ###   ########.fr       */
+/*   Updated: 2025/10/03 23:07:53 by oalananz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,4 @@ Dog::~Dog()
 void Dog::makeSound() const
 {
     std::cout << "Bark 3o 3o" << std::endl;
-}
-
-void Dog::Eat()
-{
-    std::cout<<"EATTT"<<std::endl;
 }
