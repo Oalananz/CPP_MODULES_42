@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Serializer.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oalananz <oalananz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/24 15:20:28 by oalananz          #+#    #+#             */
-/*   Updated: 2025/10/21 18:17:11 by oalananz         ###   ########.fr       */
+/*   Created: 2025/10/16 14:54:50 by oalananz          #+#    #+#             */
+/*   Updated: 2025/10/19 15:42:05 by oalananz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#ifndef SERIALIZER_HPP
+#define SERIALIZER_HPP
 
-#include "Animal.hpp"
+#include <iostream>
+#include <stdint.h>
+#include "Data.hpp"
 
-class Dog : public Animal
+class Serializer
 {
+    private:
+        Serializer();
+        Serializer(const Serializer& object);
+        Serializer& operator=(const Serializer& obj);
+        ~Serializer();
     public:
-        Dog();
-        Dog(const Dog& object);
-        Dog& operator=(const Dog& obj);
-        ~Dog();
-        void makeSound() const;
-        void Eat();
+        static uintptr_t serialize(Data* ptr);
+        static Data* deserialize(uintptr_t raw);
 };
 
 #endif

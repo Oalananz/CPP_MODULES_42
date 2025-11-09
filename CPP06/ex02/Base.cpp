@@ -1,29 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Base.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oalananz <oalananz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/24 15:20:28 by oalananz          #+#    #+#             */
-/*   Updated: 2025/10/21 18:17:11 by oalananz         ###   ########.fr       */
+/*   Created: 2025/10/21 17:41:14 by oalananz          #+#    #+#             */
+/*   Updated: 2025/10/21 17:42:24 by oalananz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#include "Base.hpp"
 
-#include "Animal.hpp"
-
-class Dog : public Animal
-{
-    public:
-        Dog();
-        Dog(const Dog& object);
-        Dog& operator=(const Dog& obj);
-        ~Dog();
-        void makeSound() const;
-        void Eat();
-};
-
-#endif
+Base::~Base() {}

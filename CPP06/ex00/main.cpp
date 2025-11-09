@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oalananz <oalananz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/24 15:20:28 by oalananz          #+#    #+#             */
-/*   Updated: 2025/10/21 18:17:11 by oalananz         ###   ########.fr       */
+/*   Created: 2025/10/16 14:55:55 by oalananz          #+#    #+#             */
+/*   Updated: 2025/10/16 15:13:39 by oalananz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#include "ScalarConverter.hpp"
 
-#include "Animal.hpp"
-
-class Dog : public Animal
+int main(int ac ,char **av)
 {
-    public:
-        Dog();
-        Dog(const Dog& object);
-        Dog& operator=(const Dog& obj);
-        ~Dog();
-        void makeSound() const;
-        void Eat();
-};
-
-#endif
+    if(ac != 2)
+    {
+        std::cout << "Usage : \n./convert [value]" << std::endl;
+        return -1;
+    }
+    ScalarConverter::convert(std::string(av[1]));
+    return 0;
+}

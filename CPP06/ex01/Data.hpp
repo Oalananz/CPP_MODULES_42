@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oalananz <oalananz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/24 15:20:28 by oalananz          #+#    #+#             */
-/*   Updated: 2025/10/21 18:17:11 by oalananz         ###   ########.fr       */
+/*   Created: 2025/10/22 12:00:00 by oalananz          #+#    #+#             */
+/*   Updated: 2025/10/22 11:48:35 by oalananz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#ifndef DATA_HPP
+#define DATA_HPP
 
-#include "Animal.hpp"
+#include <string>
 
-class Dog : public Animal
+struct Data
 {
-    public:
-        Dog();
-        Dog(const Dog& object);
-        Dog& operator=(const Dog& obj);
-        ~Dog();
-        void makeSound() const;
-        void Eat();
+    std::string name;
+    double value;
 };
 
 #endif

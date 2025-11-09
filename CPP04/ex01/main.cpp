@@ -6,7 +6,7 @@
 /*   By: oalananz <oalananz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 20:02:33 by oalananz          #+#    #+#             */
-/*   Updated: 2025/10/03 23:19:55 by oalananz         ###   ########.fr       */
+/*   Updated: 2025/10/21 18:35:23 by oalananz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,13 +60,13 @@ int main() {
         "Wagging tail excitedly"
     };
     Brain catbrain(catBrain, 15);
-    Cat *cat = new Cat;
-    cat->setBrain(catbrain);
+    Cat cat();
+    cat.setBrain(catbrain);
     Brain dogbrain(dogBrain, 15);
     Dog *dog = new Dog;
     dog->setBrain(dogbrain);
     std::cout << "Cat brain idea[5]: "
-              << cat->getBrain()->getIdea(5) << std::endl;
+              << cat.getBrain()->getIdea(5) << std::endl;
     std::cout << "Dog brain idea[10]: "
               << dog->getBrain()->getIdea(10) << std::endl;
     for (int i = 0; i < 4; i++)
